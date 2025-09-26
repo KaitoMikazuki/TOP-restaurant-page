@@ -1,3 +1,7 @@
+:root{
+    --second-c: #3B2818;
+    --primary-c: #EF9F39;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,10 +16,6 @@ a {
     text-decoration: none;
 }
 
-img {
-    width: 5vw;
-}
-
 
 #content {
     background-color: blue;
@@ -26,11 +26,17 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #EF9F39;
+    background-color: var(--primary-c);
 }
 
 .socmed {
     display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.socmed img {
+    width: 2.5vw;
 }
 
 #logo{
