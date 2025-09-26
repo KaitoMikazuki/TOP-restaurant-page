@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'comicyregular';
+    src: url('./assets/comicy-webfont.woff2') format('woff2'),
+         url('./assets/comicy-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+
+}
+
 :root{
     --second-c: #3B2818;
     --primary-c: #EF9F39;
@@ -6,6 +15,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
 }
 
 ul,li{
@@ -21,28 +32,50 @@ a {
     background-color: blue;
 }
 
-nav{
+
+/* navigation */
+nav>ul{
     padding: 2% 2.5%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     background-color: var(--primary-c);
 }
+
+#first {
+    margin-right: auto;
+}
+
+#third {
+    margin-left: auto;
+}
+
 
 .socmed {
     display: flex;
     align-items: center;
     gap: 0.5vw;
 }
-
 .socmed img {
     width: 2.5vw;
 }
 
-#logo{
-    font-size: 2rem;
+#second > * {
+    font-size: 3rem;
+    color:white;
+    font-weight: 100;
+    font-family: comicyregular;
+}
+
+nav button {
+    padding: 1rem 5vw;
+    border-radius: 5vw;
+    border: none;
+    background-color: var(--second-c);
     color:white;
 }
+
+
 
 
 
