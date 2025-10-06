@@ -76,10 +76,8 @@ nav>ul{
     height: 90vh;
     padding: 20vh 5vw;
     align-items: start;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-
+    display: grid ;
+    grid-template-columns: 50% 50%;
 }
 
 .homepage h1 {
@@ -101,12 +99,13 @@ nav>ul{
 
 .homepage img{
     justify-self: center;
-    width: 50%
+    width: 50%;
 }
 
 video {
     width:100vw;
     height: auto;
+    margin: 0;
 }
 
 .coa {
