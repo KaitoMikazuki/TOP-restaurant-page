@@ -29,6 +29,14 @@ module.exports = {
             test: /\.html$/i,
             loader: "html-loader",
         },
+        {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: "asset/resource",
+        },
+        {
+            test: /\.(mov|mp4|webm|ogg|ogv|avi|wmv)$/, // Match common video file extensions
+            type: 'asset/resource', // Use asset/resource type
+        },
     ],
   },
 };
