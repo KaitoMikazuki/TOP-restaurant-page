@@ -1,21 +1,24 @@
-const video_attributes = ["autoplay", "muted", "loop", "playsinline", "preload"]
+const video_attributes = ["playsinline", "preload", "autoplay", "loop"]
+import videoUrl from './assets/potatol.mp4'
+import imageUrl from './assets/poatol.png'
 
-export function loadPage() {
+export function loadPage(content) {
     console.log("homepage.js loaded")
     if (!Document){
         alert("loadPage function does not recognize a document");
         return 1
     }
+    // Homepage is nested under content
     const homepage = document.createElement("div");
     homepage.classList.add("homepage");
     content.appendChild(homepage);
 
-    // This section is nested inside homepage
+    // Hero  is nested inside homepage
     const hero = document.createElement("div");
     hero.classList.add("hero");
     homepage.appendChild(hero);
     
-    // This section is nested inside hero
+    // This section is nested inside hero - left
     const header = document.createElement("h1");
     header.textContent = "MAPAPALIPAD KA SA SARAP!";
 
@@ -30,13 +33,19 @@ export function loadPage() {
         const menu = document.createElement("button");
         menu.textContent = "View Menu";
         coa.append(button, menu);
-
     hero.append(header, text, coa);
 
-    const video = document.createElement("video");
-    addAttributes(video_attributes, video);
+    // This section is nested inside hero - right
+    const img = document.createElement("img");
+    img.setAttribute("src",imageUrl)
+    homepage.append(img);
 
-    homepage.appendChild(video);        
+    // Video which is under hero
+    const video = document.createElement("video");
+    video.muted = true;
+    video.setAttribute("src", videoUrl);
+    addAttributes(video_attributes, video);
+    content.appendChild(video);        
 }
 
 function addAttributes(attributesList, video){
