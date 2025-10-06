@@ -1,5 +1,6 @@
 import "./styles.css";
 import {loadPage} from "./homepage.js"
+import {loadMenu} from "./menu.js"
 console.log("Hello world")
 
 let content = document.getElementById("content");
