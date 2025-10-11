@@ -18,7 +18,7 @@ export function loadPage(content) {
     hero.classList.add("hero");
     homepage.appendChild(hero);
     
-    // This section is nested inside hero - left
+    // This section is nested inside hero - left side
     const header = document.createElement("h1");
     header.textContent = "MAPAPALIPAD KA SA SARAP!";
 
@@ -35,7 +35,7 @@ export function loadPage(content) {
         coa.append(button, menu);
     hero.append(header, text, coa);
 
-    // This section is nested inside hero - right
+    // This section is nested inside hero - right side
     const img = document.createElement("img");
     img.setAttribute("src",imageUrl)
     homepage.append(img);
