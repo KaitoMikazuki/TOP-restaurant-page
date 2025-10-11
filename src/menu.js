@@ -2,15 +2,7 @@ import kynan from "./assets/Kynan's best.png"
 import jantayo from "./assets/jan tayo.png"
 import potatol from "./assets/potatol's paborito.png"
 
-const FoodItem = function(name, price, id, description, imageCode){
-    let item = {}
-    item.name = name;
-    item.price = price;
-    item.id = id;
-    item.description = description;
-    item.imageCode = imageCode;
-    return item
-}
+const FoodItem = (name, price, id, description, imageCode) => ({name, price, id, description, imageCode})
 
 const menu_items = []
 menu_items.push(FoodItem("Jan Tayo!", 139, 1, "Garlic Parmesan + Curry Ketchup", jantayo));
@@ -40,13 +32,13 @@ function loadCard(foodItem){
     img.setAttribute("src", foodItem.imageCode);
 
     const header = document.createElement("h3");
-    header.textContent = `${foodItem.name}`;
+    header.textContent = foodItem.name;
 
     const description = document.createElement("p");
-    description.textContent = `${foodItem.description}`;
+    description.textContent = foodItem.description;
 
     const price = document.createElement("span");
-    price.textContent = `${foodItem.price}`;
+    price.textContent = foodItem.price;
 
     const button = document.createElement("button");
     button.textContent = "Order now";
