@@ -5,9 +5,9 @@ import potatol from "./assets/potatol's paborito.png"
 const FoodItem = (name, price, id, description, imageCode) => ({name, price, id, description, imageCode})
 
 const menu_items = []
-menu_items.push(FoodItem("Jan Tayo!", 139, 1, "Garlic Parmesan + Curry Ketchup", jantayo));
-menu_items.push(FoodItem("Potatol's Paborito", 139, 2, "Soy Garlic + Garlic Mayonaise", potatol));
-menu_items.push(FoodItem("Kynan's Best", 139, 3, "Buffalo + Cheese", kynan));
+menu_items.push(FoodItem("Jan Tayo!", 139, 1, "Crispy tenders and golden waffles coated in savory garlic parmesan, paired with tangy-sweet curry ketchup for a bold fusion twist.", jantayo));
+menu_items.push(FoodItem("Potatol's Paborito", 139, 2, "A perfect balance of sweet and salty soy garlic glaze, complemented by creamy garlic mayo for rich, umami comfort.", potatol));
+menu_items.push(FoodItem("Kynan's Best", 139, 3, "Spicy Buffalo heat meets melted cheesy goodness — a classic combo that’s bold, creamy, and irresistibly messy.", kynan));
 //I lowkey want to use sheets with this
 
 
