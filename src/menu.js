@@ -38,7 +38,7 @@ function loadCard(foodItem){
     description.textContent = foodItem.description;
 
     const price = document.createElement("span");
-    price.textContent = foodItem.price;
+    price.textContent = `₱${foodItem.price}`;
 
     const button = document.createElement("button");
     button.textContent = "Order now";
