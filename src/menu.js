@@ -21,6 +21,14 @@ menu_items.push(FoodItem("Kynan's Best", 139, 3, "Buffalo + Cheese", kynan));
 
 export function loadMenu(content){
     console.log(`The menu items are the following objects: ${menu_items}`);
+    const menu = document.createElement("div");
+    menu.classList.add("items")
+
+    for (let i = 0; i < menu_items.length; i++){
+        const item = loadCard(menu_items[i]);
+        menu.appendChild(item)
+    }
+    content.append(menu);
 }
 
 
