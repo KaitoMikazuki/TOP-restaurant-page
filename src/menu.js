@@ -28,7 +28,7 @@ function loadCard(foodItem){
     const card = document.createElement("div");
     card.classList.add("card");
     
-    img = document.createElement("img");
+    const img = document.createElement("img");
     img.setAttribute("src", foodItem.imageCode);
 
     const header = document.createElement("h3");
