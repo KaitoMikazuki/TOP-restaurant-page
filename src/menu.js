@@ -19,7 +19,7 @@ menu_items.push(FoodItem("Kynan's Best", 139, 3, "Buffalo + Cheese", kynan));
 //I lowkey want to use sheets with this
 
 
-export function loadMenu(){
+export function loadMenu(content){
     console.log(`The menu items are the following objects: ${menu_items}`);
 }
 
@@ -44,4 +44,5 @@ function loadCard(foodItem){
     button.textContent = "Order now";
 
     card.append(img, header, description, price, button);
+    return card
 }
