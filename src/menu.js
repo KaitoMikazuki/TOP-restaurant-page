@@ -37,12 +37,17 @@ function loadCard(foodItem){
     const description = document.createElement("p");
     description.textContent = foodItem.description;
 
+    const divWrapper = document.createElement("div");
+    divWrapper.classList.add("purchase")
+
     const price = document.createElement("span");
     price.textContent = `₱${foodItem.price}`;
 
     const button = document.createElement("button");
-    button.textContent = "Order now";
+    button.textContent = "ORDER NOW";
 
-    card.append(img, header, description, price, button);
+    divWrapper.append(price, button);
+
+    card.append(img, header, description, divWrapper);
     return card
 }

@@ -6,15 +6,19 @@
     font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Sigmar&display=swap');
+
+
 :root{
     --primary-c: #EF9F39;
     --second-c: #3B2818;
+    --third-c: #FDF6E6;
 }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Noto Sans";
 }
 
 ul,li{
@@ -28,9 +32,10 @@ a {
 /* navigation */
 nav>ul{
     padding: 2% 2.5%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     background-color: var(--primary-c);
 }
 
@@ -53,10 +58,11 @@ nav>ul{
 }
 
 #logo {
-    font-size: 2.5rem;
+    font-size: 4rem;
     color:white;
     font-weight: 100;
-    font-family: comicyregular;
+    font-family: "Luckiest guy";
+    padding: 0 1rem;
 }
 
 .button {
@@ -65,6 +71,9 @@ nav>ul{
     border: none;
     background-color: var(--second-c);
     color:white;
+    font-family: "Luckiest guy";
+    font-weight: 100;
+    font-size: 1.25rem;
 }
 
 
@@ -129,16 +138,59 @@ video {
 
 .card{
     box-shadow: 10px 10px 20px rgba(0,0,0,0.15);
-    border-radius: 8px;
+    border-radius: 14px;
     width: 70%;
-    text-align: center;
+    text-align: left;
     overflow: scroll;
+    background: var(--third-c);
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
 }
+
+.card h3{
+    font-family: "Luckiest guy" ;
+    font-weight: 100;
+}
+
+.card p{
+    font-weight: 400;
+    color: #2C2D2D;
+
+}
+
+.card span {
+    font-weight: 900;
+}
+
 .card :not(img){
-    padding:0 1rem;
+    padding:0 1.5rem;
 }
 
 .card img {
     width: 100%;
+}
+
+.action{
+    margin-top: auto;
+    padding: 333px;
+}
+
+.purchase{
+    margin-top: 1rem;
+}
+.purchase>button{
+    border-radius: 1rem;
+    border: none;
+    background: var(--second-c);
+    color: white;
+    padding: 0.5rem 2rem;
+    font-family: "Noto Sans";
+    font-weight: 800;
+}
+
+.purchase>button:hover{
+    background: var(--primary-c);
+    cursor: pointer;
 }
 
