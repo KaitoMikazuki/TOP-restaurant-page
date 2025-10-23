@@ -14,11 +14,13 @@
     --second-c: #3B2818;
     --third-c: #FDF6E6;
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "Noto Sans";
+    font-weight: 100;
 }
 
 ul,li{
@@ -60,7 +62,7 @@ nav>ul{
 #logo {
     font-size: 4rem;
     color:white;
-    font-weight: 100;
+    cursor: pointer;
     font-family: "Luckiest guy";
     padding: 0 1rem;
 }
@@ -72,13 +74,17 @@ nav>ul{
     background-color: var(--second-c);
     color:white;
     font-family: "Luckiest guy";
-    font-weight: 100;
     font-size: 1.25rem;
+    cursor:pointer;
+}
+
+.button:active {
+    box-shadow: 0 0 10px yellow inset;
+    background-color: var(--primary-c);
 }
 
 
 /* Homepage */
-
 .homepage{
     height: 90vh;
     padding: 20vh 5vw;
@@ -87,15 +93,18 @@ nav>ul{
     grid-template-columns: 50% 50%;
 }
 
+.homepage *{
+    font-weight: 500; 
+}
+
 .homepage h1 {
-    font-family: comicyregular;
+    font-family: "comicyregular";
     font-size: 5vw;
 }
 
 .homepage p {
     color: #666666;
     font-size: 1.5vw;
-    font-weight: 100;
 }
 
 .hero {
@@ -123,8 +132,14 @@ video {
 .coa :nth-child(2){
     background: none;
     border: none;
+    font-size: 1rem;
 }
 
+.coa :nth-child(2):hover{
+    background: none;
+    border: none;
+    text-decoration: underline;
+}
 
 /* menu design */
 .items{
@@ -150,7 +165,6 @@ video {
 
 .card h3{
     font-family: "Luckiest guy" ;
-    font-weight: 100;
 }
 
 .card p{
