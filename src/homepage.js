@@ -2,7 +2,7 @@ const video_attributes = ["playsinline", "preload", "autoplay", "loop"]
 import videoUrl from './assets/potatol.mp4'
 import imageUrl from './assets/poatol.png'
 
-export function loadPage(content) {
+export function loadHomePage(content) {
     console.log("homepage.js loaded")
     if (!Document){
         alert("loadPage function does not recognize a document");
