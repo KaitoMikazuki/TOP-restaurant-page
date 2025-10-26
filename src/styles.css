@@ -141,6 +141,9 @@ video {
     text-decoration: underline;
 }
 
+
+
+
 /* menu design */
 .items{
     display: grid;
@@ -156,7 +159,6 @@ video {
     border-radius: 14px;
     width: 70%;
     text-align: left;
-    overflow: scroll;
     background: var(--third-c);
     display: flex;
     flex-direction: column;
