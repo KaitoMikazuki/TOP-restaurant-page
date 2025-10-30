@@ -44,6 +44,7 @@ function loadCard(foodItem){
     price.textContent = `₱${foodItem.price}`;
 
     const button = document.createElement("button");
+    button.setAttribute("class", "order")
     button.textContent = "ORDER NOW";
 
     divWrapper.append(price, button);

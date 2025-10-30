@@ -5,8 +5,8 @@ console.log("Hello world")
 
 const content = document.getElementById("content");
 const home = document.getElementById("logo");
-const menu = document.getElementById("menu");
 
+// onLoad
 document.addEventListener("DOMContentLoaded", function(){
     loadHomePage(content);
     document.body.addEventListener("click", eventHandler)
@@ -19,22 +19,18 @@ home.addEventListener("click", function(){
 })
 
 
-
-// WHEN PAGE LOADED TRIGGER HOMEPAGE.JS
-// I might need to import every svg
-
-const socMedEvents = ["order"]
+const orderClasses = ["order"]
 function eventHandler(event){
     if (!event){
         console.log("eventHandler was triggered with a missing event parameter")
     }
     const target = event.target
-
+    
     if (target.classList.contains("menu")){
         displayMenu();
     }
 
-    if (socMedEvents.some((r) => target.classList.contains(r))){
+    else if (orderClasses.some((r) => target.classList.contains(r))){
         window.open("https://www.instagram.com/fry.n.fly?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==")
     }
 

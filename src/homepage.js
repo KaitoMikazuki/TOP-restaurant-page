@@ -4,6 +4,7 @@ import imageUrl from './assets/poatol.png'
 
 export function loadHomePage(content) {
     console.log("homepage.js loaded")
+    console.log(content)
     if (!Document){
         alert("loadPage function does not recognize a document");
         return 1
@@ -28,10 +29,13 @@ export function loadHomePage(content) {
     const coa = document.createElement("div");
     coa.classList.add("coa");
         const button = document.createElement("button");
-        button.classList.add("button")
+        button.classList.add("button");
+        button.classList.add("order")
         button.textContent = "Pre-order";
+
         const menu = document.createElement("button");
         menu.textContent = "View Menu";
+        menu.classList.add("menu")
         coa.append(button, menu);
     hero.append(header, text, coa);
 
