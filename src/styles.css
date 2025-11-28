@@ -129,10 +129,15 @@ video {
     gap:16px;
 }
 
+.coa :nth-child(1):hover{
+    background-color: var(--primary-c);
+}
+
 .coa :nth-child(2){
     background: none;
     border: none;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .coa :nth-child(2):hover{
